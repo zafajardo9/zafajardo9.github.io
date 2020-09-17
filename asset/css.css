@@ -26,7 +26,9 @@ body {
     align-items: center;
     padding: 10px;
 }
-
+label {
+    color:#fff;
+}
 #date {
     width: 100%;
     padding: 20px;

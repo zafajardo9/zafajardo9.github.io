@@ -7,17 +7,28 @@
     <link rel="stylesheet" href="./asset/css.css">
 </head>
 <body>
-    <div class="form">
+    <form action="">
+        <div class="form">
+                        
+                <label for="healthNameDeclaration">Name</label>
+                <select name="Name" id="healthName">
+                    <option value="One">Allan Fajardo</option>
+                    <option value="Two">Joelo Fadriga</option>
 
-        <input type="text" name="Date" id="date" placeholder="date here">
+                </select>
     
-        <button class="btn" onClick="onClick()">Submit</button>
-
-    </div>
+            <input type="text" name="Date" id="date" placeholder="date here">
+        
+            <button class="btn" onClick="onClick()">Submit</button>
+            <div id="base"></div>
+        </div>
+    </form>
 
 
     <script src="./asset/app.js"></script>
+    
+    <script src="./asset/item.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.1.1/jspdf.umd.min.js"></script>
 </body>
 </html>
