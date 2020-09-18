@@ -1,3 +1,15 @@
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
+var today = new Date();
+//Index
+ 
+var currentMonth = monthNames[today.getMonth()];
+
+var currentDate = currentMonth + ' ' + today.getDate() + ', ' + today.getFullYear();
+
+document.getElementById("curDate").innerHTML = today;
 
 function onClick() {
 
@@ -16,7 +28,7 @@ function onClick() {
 
         //Printing/Rendering Process
         doc.addImage(imgOne, 'JPEG', 0,0, 210,278);
-        doc.text(document.getElementById("date").value, 150,212);
+        doc.text(currentDate, 130,212);
         doc.save('HealthDec.pdf');
 
     }else {
@@ -26,7 +38,7 @@ function onClick() {
 
                 //Printing/Rendering Process
                 doc.addImage(imgTwo, 'JPEG', 0,0, 210,278);
-                doc.text(document.getElementById("date").value, 150,240);
+                doc.text(currentDate, 130,240);
                 doc.save('HealthDec.pdf');
     }
 
