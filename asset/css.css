@@ -72,3 +72,17 @@ label {
 #curTime, #curDate {
     color: #fff;
 }
+
+.temp {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    border: none;
+}
+.AMTemp {
+    margin-top: 20px;
+}
+/* 
+.PMTemp {
+
+}  */

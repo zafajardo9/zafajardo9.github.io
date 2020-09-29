@@ -15,10 +15,20 @@ function onClick() {
 
 
     //var doc = new jsPDF();
-    var doc=new window.jsPDF();
+    var doc = new window.jsPDF();
 
     //getting value from html for the person
     var healthName = document.getElementById("healthName").value;
+
+    //getting some details
+    var amtemp = document.getElementById("amTemp").value;
+    var pmtemp = document.getElementById("pmTemp").value;
+
+    //This will be the fonts
+    doc.addFont('Times New Roman', 'Times', 'serif');
+    doc.setFont('Times New Roman');
+    doc.setFontSize(10);
+
 
     //SElecting people
     if(healthName == "One") {
@@ -28,7 +38,9 @@ function onClick() {
 
         //Printing/Rendering Process
         doc.addImage(imgOne, 'JPEG', 0,0, 210,278);
-        doc.text(currentDate, 130,212);
+        doc.text(currentDate, 150,250);
+        doc.text(amtemp + "C°", 60,73);
+        doc.text(pmtemp + "C°", 150,73);
         doc.save('HealthDec.pdf');
 
     }else {
