@@ -86,3 +86,16 @@ label {
 .PMTemp {
 
 }  */
+.qr-code {
+    align-items: center;
+    
+    font-weight: 300px;
+    width: 200px;
+    height: 200px;
+    background-color: #006a71;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+
+}

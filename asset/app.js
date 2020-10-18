@@ -1,6 +1,8 @@
 const monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+const timeHour = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", 
+"12", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"]
 
 var today = new Date();
 //Index
@@ -8,8 +10,20 @@ var today = new Date();
 var currentMonth = monthNames[today.getMonth()];
 
 var currentDate = currentMonth + ' ' + today.getDate() + ', ' + today.getFullYear();
+var time = timeHour[today.getHours()] + ":" + today.getMinutes();
 
 document.getElementById("curDate").innerHTML = today;
+
+//IMplementation of QR Code
+
+var qrcode = new QRCode(document.getElementById("qrcode"), {
+    text: "https://github.com/zafajardo9",
+    width: 200,
+    height: 200,
+    colorDark : "#000000",
+    colorLight : "#ffffff",
+    correctLevel : QRCode.CorrectLevel.H
+});
 
 function onClick() {
 
@@ -42,6 +56,8 @@ function onClick() {
         doc.text(amtemp + "C°", 60,73);
         doc.text(pmtemp + "C°", 150,73);
         doc.save('HealthDec.pdf');
+        doc.save('HealthDec.pdf');
+        
 
     }else {
         console.log("other person");
@@ -53,8 +69,13 @@ function onClick() {
                 doc.text(currentDate, 130,240);
                 doc.save('HealthDec.pdf');
     }
+}
 
-    
+
+function QRGen() {
+
+    qrcode.makeCode(time);
+
 }
 
 
